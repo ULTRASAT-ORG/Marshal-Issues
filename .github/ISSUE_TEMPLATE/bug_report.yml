@@ -1,0 +1,127 @@
+name: 🐛 Bug report
+description: Something in Marshal isn't working as expected
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill in as much as you can — detailed reports get fixed faster.
+
+        **Is this a security vulnerability?** Stop here and [report it privately](https://github.com/ULTRASAT-ORG/Marshal-Issues/security/advisories/new) instead. See [SECURITY.md](https://github.com/ULTRASAT-ORG/Marshal-Issues/blob/main/SECURITY.md).
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Before you start
+      options:
+        - label: I have searched [existing issues](https://github.com/ULTRASAT-ORG/Marshal-Issues/issues?q=is%3Aissue) and this has not been reported before
+          required: true
+        - label: I am using the latest version of Marshal
+          required: true
+        - label: This is not a security vulnerability
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: When I do X, Marshal does Y instead of Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Minimal, step-by-step instructions to trigger the problem.
+      placeholder: |
+        1. Open Marshal
+        2. Go to '...'
+        3. Click on '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What did you expect to happen instead?
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Marshal version
+      description: Found in Help → About (or equivalent).
+      placeholder: e.g. 2.4.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other (specify in additional context)
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: OS version
+      placeholder: e.g. Windows 11 23H2, macOS 15.1, Ubuntu 24.04
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other (specify in additional context)
+    validations:
+      required: true
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser version
+      description: Usually under the browser's Help → About menu.
+      placeholder: e.g. Chrome 129.0.6668.70
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      options:
+        - Every time
+        - Often
+        - Sometimes
+        - Rarely / once
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, screenshots, or error messages
+      description: Paste relevant log output or error text here (it will be formatted as code automatically). Drag and drop images or recordings into the field. **Please redact credentials, tokens, and personal data.**
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else that might help — workarounds you've found, when it started happening, related issues, etc.
